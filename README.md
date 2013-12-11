@@ -3,3 +3,5 @@ PG
 
 EventRegistration
 
+$ mkdir ~/Images
+
