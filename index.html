@@ -16,10 +16,10 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/fontstyle.css" />      
         <link rel="stylesheet" href="css/table_filter.css" />      
         <link rel="stylesheet" href="css/jqmobile.datepicker.css" />
-        <!--<script type="text/javascript" src="cordova.js"></script>-->
-       <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-         <!-- <script type="text/javascript" charset="utf-8" src="js/bluetooth/bluetooth.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/bluetooth/bluetoothHandler.js"></script>-->
+        <script type="text/javascript" src="cordova.js"></script>
+       <!--  --><script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+       <script type="text/javascript" charset="utf-8" src="js/bluetooth/bluetooth.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/bluetooth/bluetoothHandler.js"></script>
         <script type="text/javascript" src="js/barcodeScanner/barcodescanner.js"></script>
 
     </head>
@@ -60,7 +60,7 @@ and open the template in the editor.
                                         </select>      
                                     </div>
                                     <div style="float: right;">
-                                        <a class="loginSubmit" onclick="authenticate();" type="submit" style="border:none;"></a>   
+                                        <a class="loginSubmit" onclick="authenticateDB();" type="submit" style="border:none;"></a>   
                                     </div>
                                 </div>
                             </div>
@@ -119,10 +119,10 @@ and open the template in the editor.
                                 </div>
                             </div>
                             <div style="width: 30%; float: left;">
-                                <img onclick="capturePhoto();" style="height:200px;float: right;" id="imageView" src="css/images/user.png" />
-<!--                                <img style="display:none;height:200px;" id="imageView" src=""/><br/>-->
+                                <img onclick="capturePhoto();" style="max-height:90%;max-width:95%;float: right;border: 1px solid red" id="imageView" src="css/images/user.png" />
+                                <img style="display:none;" id="imageView1" src=""/><br/>
                             </div>  
-<div class="labeldiv">
+									 <div class="labeldiv">
                                     <label id="latlong" for="pointer" style="font-weight: normal;font-size: 13px;">Guindy,Chennai,India</label>
                                     <img src="css/images/map_pointer.png" class="labeldivimg" />
                                 </div>
@@ -212,7 +212,7 @@ and open the template in the editor.
                     <div class="ui-grid-c" style="background:url('css/images/bar.png') no-repeat; margin-left:-4px;">
 
 
-                        <!-- <a onClick="window.location = 'viewMap.html';" class="ui-block-c"  data-role="button" data-mini="true" data-inline="true" data-theme="e" data-transition="slide">viewMap </a> -->
+                        <!-- <a onClick="window.location = 'map.html';" class="ui-block-c"  data-role="button" data-mini="true" data-inline="true" data-theme="e" data-transition="slide">map </a> -->
                         <div class="ui-block-a" style="width:100px; margin-left: 92px; margin-top: 7px">
                             <img src="css/images/home_icon.png" style="width:80px;margin-left:37px; transparent" onclick="goHome();"/>
                         </div>
@@ -226,7 +226,7 @@ and open the template in the editor.
                         </div>
 
                         <div class="ui-block-d" style="width: 81px; margin-left: 78px; margin-top: 7px">
-                            <img src="css/images/map_icon.png" style="width:80px; transparent" onclick="window.location = 'viewMap.html';"/>
+                            <img src="css/images/map_icon.png" style="width:80px; transparent" onclick="window.location = 'map.html';"/>
                         </div>
 
                     </div>   
@@ -306,7 +306,7 @@ and open the template in the editor.
                     <div class="ui-grid-c" style="background-image:url(css/images/bar.png); background-repeat:no-repeat;">
 
 
-                        <!-- <a onClick="window.location = 'viewMap.html';" class="ui-block-c"  data-role="button" data-mini="true" data-inline="true" data-theme="e" data-transition="slide">viewMap </a> -->
+                        <!-- <a onClick="window.location = 'map.html';" class="ui-block-c"  data-role="button" data-mini="true" data-inline="true" data-theme="e" data-transition="slide">map </a> -->
                         <div class="ui-block-a" style="width:100px; margin-right:176px; margin-top: 7px">
                             <img src="css/images/home_icon.png" style="width:80px;margin-left:121px; transparent" onclick="goHome();"/>
                         </div>
@@ -320,7 +320,7 @@ and open the template in the editor.
                         </div>
 
                         <div class="ui-block-d" style="width:60px; margin-left:15px; margin-top: 7px">
-                            <img src="css/images/map_icon.png" style="width:80px; transparent" onclick="window.location = 'viewMap.html';"/>
+                            <img src="css/images/map_icon.png" style="width:80px; transparent" onclick="window.location = 'map.html';"/>
                         </div>
 
                     </div>   
