@@ -2,4 +2,4 @@ PG
 ==
 
 EventRegistration
-mkdir ~/css
+$mkdir ~/css
