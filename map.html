@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Google Maps Multiple Markers</title>
+ <style>
+            body{
+                height:100%;
+                width:100%;
+            }
+            #map {
+                height: 750px;
+                width: 773px;
+                padding-top: 30px;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+            }
+            #panel {
+                background-color: lightyellow;              
+                border: 1px solid #999;                
+                box-shadow: 10px 10px 5px #888888;
+                width: 400px; 
+            }
+            .mapborder{
+                border-style:outset;
+                border-color: #708979;
+                border-width:medium;   
+            }
+        </style>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>     
+	    <script type="text/javascript" src="js/GMap/mapLoad.js"></script>  
+	    <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script> 
+	    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css"/>
+        <link href="css/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/my.css" />
+		<script src="http://maps.google.com/maps/api/js?sensor=false"type="text/javascript"></script>
+		
+</head>
+    <body>
+          <div data-role="page"  class="form-bg-set"  id="mapEventRegistration" >
+          	<div class="headerBg">  
+                <img src="css/images/IDFC_LOGO.png" style="float: left;margin-top: 10px;"/>
+
+                <img src="css/images/HTC_LOGO.png" style="float: right;margin-top: 10px;"/>
+
+            </div>
+           <div data-role="content">
+          <div align="right" style="padding-right:250px;"> <img src="css/images/user_1.png" /> 
+			<img src="css/images/logout.png" style="vertical-align: top;right: 38px;position: relative;" onclick="logout()" />
+		</div>
+           <div id="panel">	
+			<table>
+			<tr><td style="border: none; width: 100px;padding-top: 25px;"><b>Date:</b></td>
+			 <td style="border: none;width: 200px;"><input id="mapDatePicker" size="10" onclick=""/></td>
+			 <td style="border: none;"> <a data-role="button"  onclick="routePlot();" >plot</a> </td></tr>
+			 </table>
+			</div><br/>
+
+        <div id="map" class="mapborder"></div>
+        </div>
+                    <div class="footerBg">
+
+                <div class="ui-grid-c" style="background:url('css/images/bar.png') no-repeat; margin-left:-4px;">
+
+
+                    <!-- <a onClick="window.location = 'viewMap.html';" class="ui-block-c"  data-role="button" data-mini="true" data-inline="true" data-theme="e" data-transition="slide">Map </a> -->
+                    <div class="ui-block-a" style="width:100px; margin-left: 92px; margin-top: 7px">
+                        <img src="css/images/home_icon.png" style="width:80px;margin-left:37px; transparent" onclick="window.location = 'index.html';"/>
+                    </div>
+
+                    <div class="ui-block-b" style="width: 81px; margin-left: 88px; margin-top: 7px">
+                        <img src="css/images/grid_icon.png" style="width:80px; transparent" id="showTable"/>
+                    </div>
+
+                    <div class="ui-block-c" style="width: 81px; margin-left: 82px; margin-top: 7px">
+                        <img src="css/images/stats_icon.png" style="width:80px; transparent" onclick="window.location = 'chart.html';"/>
+                    </div>
+
+                    <div class="ui-block-d" style="width: 81px; margin-left: 78px; margin-top: 7px">
+                        <img src="css/images/map_icon.png" style="width:80px; transparent" onclick="window.location = 'viewMap.html';"/>
+                    </div>
+
+                </div>   
+             </div>
+        </div>
+    </body>  
+</html>
